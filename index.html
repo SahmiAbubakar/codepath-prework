@@ -60,14 +60,14 @@
         <h1 class="title">Light and Sound Memory Game</h1>
         <p>
             This is the Light and Sound Game, where your memory is truly tested!<br>
-          <button id="startBtn">Start</button>
-          <button id="StopBtn" class="hidden">Stop</button>
+          <button id="startBtn" onclick="startGame()">Start</button>
+          <button id="StopBtn" class="hidden" onclick="stopGame()">Stop</button>
           </p>
         <div id = "GameButtonArea">
-          <button id="button1">Button1</button>
-          <button id="button2">Button2</button>
-          <button id="button3">Button3</button>
-          <button id="button4">Button4</button>
+          <button id="button1" onmousedown="startTone(1)" onmouseup="stopTone()">Button1</button>
+          <button id="button2" onmousedown="startTone(2)" onmouseup="stopTone()">Button2</button>
+          <button id="button3" onmousedown="startTone(3)" onmouseup="stopTone()">Button3</button>
+          <button id="button4" onmousedown="startTone(4)" onmouseup="stopTone()">Button4</button>
         </div>
 
 
