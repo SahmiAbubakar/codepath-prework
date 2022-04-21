@@ -100,6 +100,15 @@ function guess(btn){
   if(!gamePlaying){
     return;
   }
-  
+  if(btn == pattern[progress]){
+    if(gamePlaying == true){
+      playClueSequence();
+      if(progress != pattern.length()){
+        winGame();
+      }
+    }
+  }else{
+    loseGame();
+  }
   // add game logic here
 }
