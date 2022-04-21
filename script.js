@@ -7,12 +7,14 @@ var progress = 0;
 var gamePlaying = false;
 var volume = 0.5;
 var tonePlaying = false;
+var guessCounter= 0;
 function startGame(){
     
     progress = 0;
     gamePlaying = true;
     document.getElementById("startBtn").classList.add("hidden");
     document.getElementById("StopBtn").classList.remove("hidden");
+  playClueSequence();
 }
 function stopGame(){
     
@@ -20,6 +22,7 @@ function stopGame(){
     gamePlaying = false;
     document.getElementById("StopBtn").classList.add("hidden");
     document.getElementById("startBtn").classList.remove("hidden");
+    
 }
 const freqMap = {
   1: 261.6,
@@ -74,6 +77,7 @@ function playSingleClue(btn){
   }
 }
 function playClueSequence(){
+  guessCounter= 0;
   context.resume()
   let delay = nextClueWaitTime; //set delay to initial wait time
   for(let i=0;i<=progress;i++){ // for each clue that is revealed so far
